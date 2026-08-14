@@ -1,0 +1,16 @@
+{
+  "name": "liverpool-vianey",
+  "version": "1.0.0",
+  "description": "LIVERPOOL",
+  "license": "ISC",
+  "author": "Vianey Montes Rosales",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "codeceptjs": "^4.1.0",
+    "playwright": "^1.62.1"
+  }
+}

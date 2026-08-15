@@ -7,9 +7,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "allure generate ./output/allure-results -o ./allure-report --clean",
+    "abririreporteallure": "allure opne ./allure-report"
   },
   "devDependencies": {
+    "allure-codeceptjs": "^3.10.2",
+    "allure-playwright": "^3.10.2",
     "codeceptjs": "^4.1.0",
     "playwright": "^1.62.1"
   }

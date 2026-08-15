@@ -6,7 +6,7 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: "chromium",
-      url: 'https://www.liverpool.com.mx',
+      url: 'http://localhost',
       show: true,
       locale: "es-MX"
     }
@@ -31,7 +31,8 @@ exports.config = {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
       outputDir: './output/allure-results'
-    }
+    }, 
+   
   },
 
   bootstrap: null,

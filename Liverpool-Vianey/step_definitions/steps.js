@@ -24,18 +24,29 @@ Then('debería visualizar productos relacionados con {string}', (producto) => {
   liverpoolPage.seeRelatedProducts(producto);
   
 });
+When('abro el menú de categorías', () => {
+  menuPage.openCategories();
+});
+
 When('abro las categorías', () => {
   menuPage.openCategories();
 });
 
-Then('debería visualizar las categorías', () => {
-  menuPage.seeCategories();
+Then('debería visualizar las categorías principales', () => {
+  I.seeElement(menuPage.categoriesButton);
 });
-
 When('selecciono la subcategoría {string}', (subcategory) => {
   menuPage.selectSubcategory(subcategory);
 });
 
 Then('debería acceder a la subcategoría {string}', (subcategory) => {
   I.see(subcategory);
+});
+
+When('navego a la categoría {string}', (category) => {
+  menuPage.selectSubcategory(category);
+});
+
+Then('debería visualizar productos de la categoría {string}', (category) => {
+  categoryPage.seeCategoryProducts(category);
 });

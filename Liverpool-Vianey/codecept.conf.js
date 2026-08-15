@@ -5,13 +5,20 @@ exports.config = {
       browser: 'chromium',
       url: 'https://www.liverpool.com.mx',
       show: true,
-          waitForNavigation: 'domcontentloaded'
-    }
+      video: true,
+      pressKeyDelay:100,
+      trace:true,
+     waitForNavigation: 'domcontentloaded'
+    },
+    PlaywrightVideoAllure: {
+  require: './utils/playwrightVideoAllure_helper.js'
+}
   },
   include: {
     I: './steps_file.js',
-   liverpoolPage: './pages/liverpoolPage.js',
-     menuPage: './pages/menuPage.js'
+     liverpoolPage: './pages/liverpoolPage.js',
+     menuPage: './pages/menuPage.js',
+     categoryPage: './pages/CategoryPage.js'
 
   },
   mocha: {},
@@ -29,10 +36,10 @@ exports.config = {
     on: 'fail'
   },
   allure: {
-    enabled: true,
-    require: '@codeceptjs/allure-legacy',
-    outputDir: './output/allure-results'
-        } 
+  enabled: true,
+  require: 'allure-codeceptjs',
+ 
+}
   },
   stepTimeout: 0,
   stepTimeoutOverride: [{

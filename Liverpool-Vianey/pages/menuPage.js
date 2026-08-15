@@ -24,4 +24,9 @@ selectSubcategory(subcategory) {
     I.amOnPage('/tienda/ropa/catst4003074');
     I.wait(5);
   }
+  if (subcategory === 'Electrónica') {
+    I.amOnPage('/tienda/electronica/cat5150041');
+    I.wait(8);
+  }
+
 }}
